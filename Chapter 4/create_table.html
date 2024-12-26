@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tables</title>
+</head>
+
+<style>
+    /* General body styles */
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f9f9f9;
+        color: #333;
+    }
+
+    /* Heading styles */
+    h1 {
+        text-align: center;
+        margin: 20px 0;
+        color: #444;
+    }
+
+    /* Table container */
+    table {
+        margin: 20px auto;
+        border-collapse: collapse;
+        width: 80%;
+        max-width: 600px;
+        background-color: #fff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        overflow: hidden;
+    }
+
+    /* Table header */
+    thead tr {
+        background-color: #4CAF50;
+        color: white;
+        text-align: left;
+    }
+
+    thead th {
+        padding: 12px;
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    /* Table body */
+    tbody tr:nth-child(odd) {
+        background-color: #f2f2f2;
+    }
+
+    tbody tr:hover {
+        background-color: #ddd;
+    }
+
+    tbody td {
+        padding: 10px;
+        text-align: left;
+        font-size: 14px;
+    }
+
+    /* Add some spacing for the table */
+    table td,
+    table th {
+        border: 1px solid #ddd;
+    }
+
+    /* Responsive table for smaller screens */
+    @media (max-width: 600px) {
+        table {
+            width: 100%;
+        }
+
+        thead {
+            display: none;
+        }
+
+        tbody td {
+            display: block;
+            width: 100%;
+            text-align: right;
+            position: relative;
+            padding-left: 50%;
+        }
+
+        tbody td::before {
+            content: attr(data-label);
+            position: absolute;
+            left: 10px;
+            font-weight: bold;
+            text-align: left;
+        }
+
+        tbody tr {
+            display: block;
+            margin-bottom: 10px;
+        }
+    }
+</style>
+
+<body>
+    <h1>Tables In HTML</h1>
+
+    <table>
+        <!--Head-->
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Role</th>
+                <th>Salary</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Priyank</td>
+                <td>Student</td>
+                <td>1Cr</td>
+            </tr>
+            <tr>
+                <td>Harry</td>
+                <td>YouTuber</td>
+                <td>100Cr</td>
+            </tr>
+            <tr>
+                <td>Shivam</td>
+                <td>Ai Speci</td>
+                <td>1Lakh</td>
+            </tr>
+            <tr>
+                <td>Renuka</td>
+                <td>Ml</td>
+                <td>10Cr</td>
+            </tr>
+            <tr>
+                <td>Thank</td>
+                <td colspan="2">You</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>
